@@ -14,13 +14,12 @@ namespace CSE210_01
                 positionValues.Add(index.ToString());
                 index++;
             }
-
-            for (index = 0; index < positionValues.Count; index++)
-            {
-                Console.WriteLine(positionValues[index]);
-            }
             
-            Console.WriteLine($"\t{positionValues[0]} | {positionValues[1]} | {positionValues[2]}");
+            Console.WriteLine($"\t {positionValues[0]} | {positionValues[1]} | {positionValues[2]}");
+            Console.WriteLine($"\t---+---+---");
+            Console.WriteLine($"\t {positionValues[3]} | {positionValues[4]} | {positionValues[5]}");
+            Console.WriteLine($"\t---+---+---");
+            Console.WriteLine($"\t {positionValues[6]} | {positionValues[7]} | {positionValues[8]}");
 
         }   
     }
