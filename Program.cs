@@ -44,15 +44,10 @@ namespace CSE210_01
             }
             else if (turn % 2 == 0)
             {
-                
                 Console.Write("O's turn to choose a square (1-9): ");
                 int square = int.Parse(Console.ReadLine());
                 for (int index = 0; index < chosenPositions.Count; index++)
                 {
-                    Console.WriteLine($"Square: {square}");
-                    Console.WriteLine($"Index: {index}");
-                    Console.WriteLine($"List count: {chosenPositions.Count}");
-                    Console.WriteLine($"Value: {chosenPositions[index]}");
                     if (square == chosenPositions[index])
                     {
                         Console.WriteLine("This square has already been used. Please select a different square.");
@@ -60,12 +55,6 @@ namespace CSE210_01
                     }
                     else if (index == (chosenPositions.Count - 1))
                     {
-                        Console.WriteLine("===================");
-                        Console.WriteLine($"Square: {square}");
-                        Console.WriteLine($"Index: {index}");
-                        Console.WriteLine($"List count: {chosenPositions.Count}");
-                        Console.WriteLine($"Value: {chosenPositions[index]}");
-                        Console.WriteLine("===================");
                         chosenPositions.Add(square);
                         break;
                     }
@@ -80,12 +69,7 @@ namespace CSE210_01
                 int square = int.Parse(Console.ReadLine());
                 for (int index = 0; index < chosenPositions.Count; index++)
                 {
-                    Console.WriteLine("-------------------");
-                    Console.WriteLine($"Square: {square}");
-                    Console.WriteLine($"Index: {index}");
-                    Console.WriteLine($"List count: {chosenPositions.Count}");
-                    Console.WriteLine($"Value: {chosenPositions[index]}");
-                    Console.WriteLine("-------------------");
+                    
                     if (square == chosenPositions[index])
                     {
                         Console.WriteLine("This square has already been used. Please select a different square.");
@@ -93,12 +77,7 @@ namespace CSE210_01
                     }
                     else if (index == (chosenPositions.Count - 1))
                     {
-                        Console.WriteLine("===================");
-                        Console.WriteLine($"Square: {square}");
-                        Console.WriteLine($"Index: {index}");
-                        Console.WriteLine($"List count: {chosenPositions.Count}");
-                        Console.WriteLine($"Value: {chosenPositions[index]}");
-                        Console.WriteLine("===================");
+                        
                         chosenPositions.Add(square);
                         break;
                     }
@@ -110,6 +89,7 @@ namespace CSE210_01
 
             static void GameOver()
             {
+                Console.WriteLine("Thats all their is folks!");
 
             }
 
