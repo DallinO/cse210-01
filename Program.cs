@@ -6,7 +6,7 @@ namespace CSE210_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Tic-Tac-Toe");
+            Console.WriteLine("Welcome to Tic-Tac-Toe!\n");
             List<string> positionValues = new List<string>();
             int index = 1;
             while (index < 10)
@@ -14,13 +14,20 @@ namespace CSE210_01
                 positionValues.Add(index.ToString());
                 index++;
             }
+
+            Display(positionValues);
             
+
+        }   
+
+        static void Display(List<string> positionValues)
+        {
             Console.WriteLine($"\t {positionValues[0]} | {positionValues[1]} | {positionValues[2]}");
             Console.WriteLine($"\t---+---+---");
             Console.WriteLine($"\t {positionValues[3]} | {positionValues[4]} | {positionValues[5]}");
             Console.WriteLine($"\t---+---+---");
             Console.WriteLine($"\t {positionValues[6]} | {positionValues[7]} | {positionValues[8]}");
 
-        }   
+        }
     }
 }
