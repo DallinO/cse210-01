@@ -6,7 +6,22 @@ namespace CSE210_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            Console.WriteLine("Welcome to Tic-Tac-Toe");
+            List<int> positionValues = new List<int>();
+            int index = 1;
+            while (index < 10)
+            {
+                positionValues.Add(index);
+                ++index;
+            }
+
+            for (index = 0; index < positionValues.Count; index++)
+            {
+                Console.WriteLine(positionValues[index]);
+            }
+
+
+
+        }   
     }
 }
