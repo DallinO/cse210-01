@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+
+Dallin Olson
+Tic-Tac-Toe
+
+*/
+
+
+using System;
 
 namespace CSE210_01
 {
@@ -11,7 +19,6 @@ namespace CSE210_01
             for (int index = 1; index < 10; index++)
             {
                 positionValues.Add(index.ToString());
-                Console.WriteLine(positionValues[index -1]);
             }
 
             List<int> chosenPositions = new List<int>();
