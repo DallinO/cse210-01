@@ -25,28 +25,50 @@ namespace CSE210_01
 
         static void Display(List<string> positionValues, float turn, List<int> chosenPositions)
         {
+            Console.WriteLine("");
             Console.WriteLine($"\t {positionValues[0]} | {positionValues[1]} | {positionValues[2]}");
             Console.WriteLine($"\t---+---+---");
             Console.WriteLine($"\t {positionValues[3]} | {positionValues[4]} | {positionValues[5]}");
             Console.WriteLine($"\t---+---+---");
             Console.WriteLine($"\t {positionValues[6]} | {positionValues[7]} | {positionValues[8]}\n");
 
-            Turn(positionValues, turn, chosenPositions);
+            while (turn != 10)
+            {
+                Turn(positionValues, turn, chosenPositions);
+            }
+            Console.WriteLine("Its a draw!");
+
+            
 
         }
 
         static void Turn(List<string> positionValues, float turn, List<int> chosenPositions)
         {
 
-            if (turn == 10)
+            if ((positionValues[0] == "X" && positionValues[1] == "X" && positionValues[2] == "X")
+               || (positionValues[0] == "X" && positionValues[3] == "X" && positionValues[6] == "X")
+               || (positionValues[6] == "X" && positionValues[7] == "X" && positionValues[8] == "X")
+               || (positionValues[2] == "X" && positionValues[5] == "X" && positionValues[8] == "X")
+               || (positionValues[6] == "X" && positionValues[4] == "X" && positionValues[2] == "X")
+               || (positionValues[0] == "X" && positionValues[4] == "X" && positionValues[8] == "X"))
             {
-                GameOver();
+                Console.WriteLine("Player X wins!");
+                Environment.Exit(0);
+            }
+            if ((positionValues[0] == "O" && positionValues[1] == "O" && positionValues[2] == "O")
+               || (positionValues[0] == "O" && positionValues[3] == "O" && positionValues[6] == "O")
+               || (positionValues[6] == "O" && positionValues[7] == "O" && positionValues[8] == "O")
+               || (positionValues[2] == "O" && positionValues[5] == "O" && positionValues[8] == "O")
+               || (positionValues[6] == "O" && positionValues[4] == "O" && positionValues[2] == "O")
+               || (positionValues[0] == "O" && positionValues[4] == "O" && positionValues[8] == "O"))
+            {
+                Console.WriteLine("Player O wins!");
+                Environment.Exit(0);
             }
             else if (turn % 2 == 0)
             {
                 Console.Write("O's turn to choose a square (1-9): ");
                 int square = int.Parse(Console.ReadLine());
-                Console.WriteLine("");
                 if (square < 1 || square > 9)
                 {
                     Console.WriteLine("Error: Value must be between 1 and 9.");
@@ -73,7 +95,6 @@ namespace CSE210_01
             {
                 Console.Write("X's turn to choose a square (1-9): ");
                 int square = int.Parse(Console.ReadLine());
-                Console.WriteLine("");
                 if (square < 1 || square > 9)
                 {
                     Console.WriteLine("Error: Value must be between 1 and 9.");
@@ -99,11 +120,7 @@ namespace CSE210_01
                 Display(positionValues, turn, chosenPositions);
             }
 
-            static void GameOver()
-            {
-                Console.WriteLine("Thats all their is folks!");
 
-            }
 
 
         }
