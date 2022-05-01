@@ -46,6 +46,12 @@ namespace CSE210_01
             {
                 Console.Write("O's turn to choose a square (1-9): ");
                 int square = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
+                if (square < 1 || square > 9)
+                {
+                    Console.WriteLine("Error: Value must be between 1 and 9.");
+                    Turn(positionValues, turn, chosenPositions);
+                }
                 for (int index = 0; index < chosenPositions.Count; index++)
                 {
                     if (square == chosenPositions[index])
@@ -67,6 +73,12 @@ namespace CSE210_01
             {
                 Console.Write("X's turn to choose a square (1-9): ");
                 int square = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
+                if (square < 1 || square > 9)
+                {
+                    Console.WriteLine("Error: Value must be between 1 and 9.");
+                    Turn(positionValues, turn, chosenPositions);
+                }
                 for (int index = 0; index < chosenPositions.Count; index++)
                 {
                     
