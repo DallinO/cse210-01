@@ -22,6 +22,7 @@ The project files and folders are organized as follows:
 ```
 root                    (project root folder)
 +-- Game                (source code folder)
++-- .gitignore          (honestly not sure what this is)
 +-- Program.cs          (program entry point)    
 +-- README.md           (general info)
 +-- Unit04.csproj       (dotnet project file)
