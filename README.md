@@ -1,7 +1,6 @@
-# Greed
-The object of the game is to catch the falling gems while avoiding the
-rocks. The game will end when all gems are caught. If you run into a
-you die.
+# Tic-Tac-Toe
+The first player to get three in a row wins! Obviously requires two
+people so you must have friends in order to play.
 
 ---
 ## Getting Started
@@ -30,7 +29,6 @@ root                    (project root folder)
 
 ## Required Technologies
 * dotnet 6.0
-* raylib-cs 3.7.0.1
 
 ## Authors
 * Dallin Olson
